@@ -4,6 +4,7 @@ import MathComp from './components/MathComp';
 // import Links from './Links';
 import './App.css';
 import math from './components/math.js'
+import AccountApp from './components/AccountApp'
 
 class App extends React.Component {
   constructor(){
@@ -28,6 +29,7 @@ class App extends React.Component {
               break;
               case "database":
                 console.log("run database");
+                this.setState({linden:<AccountApp/>});
               break;
               case "exit":
                 console.log("Run Un Mount")
