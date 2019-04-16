@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise - Basic Syntax</title>
+	<h1> Syntax Library
+	 </h1>
+
+</head>
+
+<body>
+
+<script>
+// Declare number x, give it the value
+let x = 6
+
+console.log(x);
+	
+//string
+
+let myBasicColour = "red";
+
+console.log(" my basiccolour variable is " + myBasicColour);
+
+
+//boolean
+
+let b=true
+console.log(" the boolean value is " + b);
+
+//array
+
+var nickName = ["paco", "lucho", "pepe"];
+
+console.log(nickName);
+
+// add to the front
+nickName.unshift("rob");
+
+console.log( "I added new element at the beginning of array")
+console.log (nickName)
+
+// add to the end
+
+nickName.push("bob");
+console.log( "I added new element at the end of array")
+console.log(nickName)
+
+// update values
+nickName [0]="juancho"
+console.log( "I updated first element")
+console.log(nickName)
+
+//dictionary / objects
+
+var car = {brand:"Fiat", model:"500", color:"white"}
+console.log(car);
+
+//sample if / else
+console.log(x)
+
+if (b=true) {
+  d=x+1
+}
+console.log(b)
+console.log(d)
+
+//functions Calling the function runs it. retuns results.
+
+function myFirstFunction(p1, p2) {
+  return p1 * p2;   // The function returns the product of p1 and p2
+}
+
+console.log(myFirstFunction(3,3));
+
+//loops: For
+
+for (var i = 0; i < 5; i++) {
+	console.log(i)
+
+}
+
+//loops: For/in
+
+do {
+  i++
+}
+while (i<10);
+
+console.log(i)
+
+// for - loops through a block of code a number of times
+// for/in - loops through the properties of an object
+// while - loops through a block of code while a specified condition is true
+// do/while - loops through a block of code once, and then repeats the loop while a specified condition is true
+
+
+//while
+//foreach
+
+//Objects/ DIctionaries
+
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+  
+  }
+console.log(person)
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

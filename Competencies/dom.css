@@ -1,0 +1,39 @@
+#leftSide {
+    float: left;
+    width: 40% ;
+    /*width: 300px;*/
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 15px 10px 5px 0px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 20Px;
+    margin-bottom: 10px;
+    /*padding: 20px;*/
+}
+#rightSide {
+    float: right;
+    width: 40% ;
+    /*width: 300px;*/
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 15px 10px 5px 0px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 20Px;
+    margin-bottom: 10px;
+    /*padding: 20px;*/
+}
+.cardDesign {
+background-color: red;
+
+
+
+}
+.addBtnClass {
+    background-color: yellow;
+}
