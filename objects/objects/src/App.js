@@ -5,6 +5,8 @@ import MathComp from './components/MathComp';
 import './App.css';
 import math from './components/math.js'
 import AccountApp from './components/AccountApp'
+import AccountsControllerApp from './components/AccountsControllerApp'
+
 
 class App extends React.Component {
   constructor(){
@@ -17,6 +19,10 @@ class App extends React.Component {
             console.log("Button pressed: ",event);
 
             switch(event.toLowerCase()) {
+              case "flower":
+                console.log("run flower");
+                this.setState({linden: <App-header/>});
+              break;
               case "calculator":
                 console.log("run calculator");
                 this.setState({linden:<MathComp/>});
@@ -26,6 +32,7 @@ class App extends React.Component {
               break;
               case "cloud":
                 console.log("run cloud");
+                this.setState({linden:<AccountsControllerApp/>});
               break;
               case "database":
                 console.log("run database");
@@ -44,7 +51,12 @@ class App extends React.Component {
               <div className="App-row">
                 <img alt="" className="logo" src={require('./100sqflogo.jpeg')}/>
                 <h1>Luis Apps</h1>   
-                <button  onClick={()=> {this.selector('calender')}}> 
+                 <button  onClick={()=> {this.selector('flower')}}> 
+                  <img 
+                    className="App-icon" 
+                    src={logo} color="black" alt="descripcion del icono"
+                  />
+                </button><button  onClick={()=> {this.selector('calender')}}> 
                   <img 
                     className="App-icon" 
                     src="https://img.icons8.com/windows/96/0000000/calendar.png" alt="descripcion del icono"
@@ -71,8 +83,7 @@ class App extends React.Component {
                     alt="descripcion del icono"
                   />
                 </button>
-                
-</div>
+                </div>
                 <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 </header> 

@@ -1,37 +1,49 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Account from './Account.js'
+
+
+
 
 
 class AccountApp extends React.Component{
 
 	constructor(){
 		super()
-	  	this.state={
-	  		balance:0,
-	  	    accountName:"testAccount",
+	  	
+	  	this.state= {
+	  		currentBal: 0,
 	  	}
-	  	let testAccount = new Account(0,"Luis")
-	}	
 
+		this.testAccount = new Account(0, "LuisTest1")
+		this.balance = this.testAccount.balance
+		this.AccountObject= this.testAccount.accountName
+
+	}	
 
 	selector(event){
 			let a=0
-            console.log("Button pressed: ",event);
+            a=parseInt(document.getElementById("input1").value);
+            console.log("Button pressed: ",event,a);
 
-            a=parseInt(document.getElementById("input1"))
+            
 
             switch(event.toLowerCase()) {
 	              case "deposit":
-	                console.log("in deposit",a);
-	                console.log("test");
+					console.log("in deposit",a);
+					this.setState({currentBal: this.testAccount.deposit(a)})
 	              break;
-	              case "withdraw":
+	              
+	              case "withdraw": 	
+					a=parseInt(document.getElementById("input1").value);
+					console.log("in withdraw",a);
+					this.setState({currentBal: this.testAccount.withdraw(a)})
 	                console.log("in withdraw",a);
-	                console.log("test");
 	              break;
+	              
 	              case "balance":
 		          	console.log("in balance",a);
-	                console.log("test");
+					this.setState({currentBal: this.testAccount.checkBalance(a)})
+	                console.log("in withdraw",a);
 		          break;
 	              default:
             }
@@ -45,9 +57,9 @@ class AccountApp extends React.Component{
 		return(
 			<div className="class1">
 				<div>
-					<h1>hello from AccountAPP</h1>
+					<h1>Luis Account Manager</h1>
 				</div>
-				<input id=" sinput1" placeholder="enter transaction $'s" onClick={this.handleClick()}></input>
+				<input id="input1" placeholder="enter transaction $'s"></input>
 				<div className="class2">
 					<button onClick={()=> {this.selector('deposit')}}> 
 	                  <img 
@@ -69,18 +81,14 @@ class AccountApp extends React.Component{
 	                </button>
 				</div>
 				<div className="class3">
-					<p>{this.state.balance} </p>
+					<p>>Your current balance is {this.state.currentBal}$ </p>
 				</div>
-				<button onClick={()=> {this.selector('exit')}}> 
-		      		<img 
-		              className="App-operator"
-		              src="https://img.icons8.com/windows/96/0000000/login-rounded-up.png" 
-		              alt="descripcion del icono"
-		            />
-		            "To return to Luis Apps, refresh browser"
-	      		</button>
+				
+	      		<hr></hr>
+	      		<div>Press a icon above</div>
 			</div>
 		)
 	}
-}	
+}
+	
 export default AccountApp

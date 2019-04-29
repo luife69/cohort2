@@ -97,15 +97,10 @@ class MathComp extends React.Component {
 	      	<input id="input2" placeholder="Enter second number here"></input>
 	      	<p>{this.state.output}</p>
 	      	<br/>
-	      	<button onClick={()=> {this.operator('exit')}}> 
-	      	<img 
-	              className="App-operator"
-	              src="https://img.icons8.com/windows/96/0000000/login-rounded-up.png" 
-	              alt="descripcion del icono"
-	            />
-	            "To return to Luis Apps, refresh browser"
-	      	</button>
+	      	
+	      	
 	      	<hr/>
+	      	<div>Press a icon above</div>
 	      </div>
 	    )   
 	}
